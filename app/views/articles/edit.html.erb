@@ -1,0 +1,21 @@
+<!-- In the Form_for we passed the @article instance 
+from the edit which looked up the article instance using the .find(), it then
+saved the id we found using params,we then assigned Article.find to
+the @article instance and passed it to the edit view page we're currently in.
+Since @article is not a new instance of Article, the inputs on this form, 
+the text field and text area,will be populated 
+with the corresponding object values(meaning the @article instancec current values).-->
+
+<%= form_for @article do |f| %>
+  <%= f.label "Article title" %> <br>
+  <%= f.text_field :title %> <br>
+
+  <%= f.label "Article Description" %><br>
+  <%= f.text_area :description %><br>
+
+  <%= f.submit "Submit Article" %>
+  
+<% end %>
+
+
+
